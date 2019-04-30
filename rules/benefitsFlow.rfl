@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>benefitsFlow</name>
+  <uuid>79b70d7e-b912-4562-8d56-d8ae50d81c96</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="ValidationRule" Ordering="Default">
+        <InitialActions/>
+        <FinalActions/>
+        <RuleList>
+          <Rule Uuid="a85488eb-f0c8-48f8-bcd4-16d9791829b2"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="employementBenefitsTree" Ordering="Default">
+        <FinalActions Language="irl"><![CDATA[data();]]></FinalActions>
+        <RuleList>
+          <Rule Uuid="51e0331c-99a5-46ad-a4dd-dba4c5158d6a"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="ValidationRule"/>
+      <TaskNode Identifier="node_3" Task="employementBenefitsTree"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
+      <Transition Identifier="transition_2" Source="node_3" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_3#height">40.0</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_2#height">40.0</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_2#width">119.384766</Data>
+      <Data Name="node_3#y">180.0</Data>
+      <Data Name="node_3#width">182.06836</Data>
+      <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">91.03418</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">91.03418</Data>
+      <Data Name="node_1#x">91.03418</Data>
+      <Data Name="node_1#width">20.000008</Data>
+      <Data Name="node_1#y">261.0</Data>
+      <Data Name="node_1#height">20.000015</Data>
+      <Data Name="node_2#x">91.03418</Data>
+      <Data Name="node_2#y">88.0</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties>
+    <imports><![CDATA[import Benefits.Benefits;
+use data();
+]]></imports>
+  </Properties>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

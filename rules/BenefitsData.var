@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>BenefitsData</name>
+  <uuid>204b8229-7741-482a-827a-90a8104840d4</uuid>
+  <variables name="Benefits" type="Benefits.Benefits" initialValue="" verbalization="Benefits"/>
+  <variables name="familyBenefits" type="java.util.ArrayList" initialValue="" verbalization="familyBenefits"/>
+  <variables name="employement" type="java.lang.String" initialValue="" verbalization="employement"/>
+</ilog.rules.studio.model.base:VariableSet>

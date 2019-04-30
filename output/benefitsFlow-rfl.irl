@@ -1,0 +1,39 @@
+import Benefits.Benefits;
+use data();
+
+
+flowtask benefitsFlow {
+  property mainflowtask = false;
+  property ilog.rules.business_name = "benefitsFlow";
+  property ilog.rules.package_name = "";
+  body {
+    benefitsFlow#ValidationRule;
+    benefitsFlow#employementBenefitsTree;
+  }
+};
+
+ruletask benefitsFlow#ValidationRule {
+  property ilog.rules.business_name = "benefitsFlow>ValidationRule";
+  property ilog.rules.package_name = "";
+  algorithm = sequential;
+  property ilog.rules.engine.sequential.fastpath = true;
+  ordering = sorted;
+  body {
+    ValidationRule
+  }
+};
+
+ruletask benefitsFlow#employementBenefitsTree {
+  property ilog.rules.business_name = "benefitsFlow>employementBenefitsTree";
+  property ilog.rules.package_name = "";
+  algorithm = sequential;
+  property ilog.rules.engine.sequential.fastpath = true;
+  ordering = sorted;
+  finalaction {
+    data();
+  };
+  body {
+    group("employementBenefitsTree")
+  }
+};
+

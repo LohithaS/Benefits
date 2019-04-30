@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="BenefitsOperation" usingRuleflow="true" ruleflowName="benefitsFlow" usingExtractor="true" targetRuleProjectName="Benefits">
+  <name>BenefitsOperation</name>
+  <uuid>7ead7993-aa61-467e-bf1c-bfd7250a7f73</uuid>
+  <referencedVariables variableName="Benefits" variableSetName="BenefitsData">
+    <variableSet href="../rules/BenefitsData.var#204b8229-7741-482a-827a-90a8104840d4"/>
+  </referencedVariables>
+  <referencedVariables variableName="employement" variableSetName="BenefitsData" direction="IN_OUT">
+    <variableSet href="../rules/BenefitsData.var#204b8229-7741-482a-827a-90a8104840d4"/>
+  </referencedVariables>
+  <referencedVariables variableName="familyBenefits" variableSetName="BenefitsData" direction="OUT">
+    <variableSet href="../rules/BenefitsData.var#204b8229-7741-482a-827a-90a8104840d4"/>
+  </referencedVariables>
+  <ruleflow href="../rules/benefitsFlow.rfl#79b70d7e-b912-4562-8d56-d8ae50d81c96"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="BenefitsOperation_extractor" validator="None"/>
+  <targetRuleProject href="../../Benefits#36b1c25d-0e4c-4e65-a33c-9ee2a24eb83a"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

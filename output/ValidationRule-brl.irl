@@ -1,0 +1,16 @@
+rule ValidationRule {
+   property ilog.rules.business_name = "ValidationRule";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      IlrContext() from ?context;
+      evaluate ((employement.equals("no")));
+   } then {
+      employement = "eligible for government employment";
+      ?context.updateContext();
+   } else {
+      employement = "not eligible for government employment!!!!!";
+      ?context.updateContext();
+   }
+}
+

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTree xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>employementBenefitsTree</name>
+  <uuid>51e0331c-99a5-46ad-a4dd-dba4c5158d6a</uuid>
+  <locale>en_US</locale>
+  <definition>
+<DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+  <Body>
+    <Structure>
+      <ConditionDefinitions>
+        <ConditionDefinition Id="C0">
+          <ExpressionDefinition>
+            <Text><![CDATA[the marital status of Benefits is <a string>   ]]></Text>
+          </ExpressionDefinition>
+        </ConditionDefinition>
+        <ConditionDefinition Id="C2">
+          <ExpressionDefinition>
+            <Text><![CDATA[the no of children of Benefits is less than <a number>  ]]></Text>
+          </ExpressionDefinition>
+        </ConditionDefinition>
+        <ConditionDefinition Id="C3">
+          <ExpressionDefinition>
+            <Text><![CDATA[the no of children of Benefits is more than <a number>  ]]></Text>
+          </ExpressionDefinition>
+        </ConditionDefinition>
+        <ConditionDefinition Id="C1">
+          <ExpressionDefinition>
+            <Text><![CDATA[the no of children of Benefits is  between <min> and <max> ]]></Text>
+          </ExpressionDefinition>
+        </ConditionDefinition>
+      </ConditionDefinitions>
+      <ActionDefinitions>
+        <ActionDefinition Id="A1">
+          <ExpressionDefinition>
+            <Text><![CDATA[set 'familyBenefits' to <variable value>]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+        <ActionDefinition Id="A4">
+          <ExpressionDefinition>
+            <Text><![CDATA[set 'familyBenefits' to <variable value>]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+        <ActionDefinition Id="A0">
+          <ExpressionDefinition>
+            <Text><![CDATA[set 'familyBenefits' to <variable value>]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+        <ActionDefinition Id="A2">
+          <ExpressionDefinition>
+            <Text><![CDATA[set 'familyBenefits' to <variable value>]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+      </ActionDefinitions>
+    </Structure>
+    <Contents>
+      <Partition DefId="C0">
+        <Condition>
+          <Expression>
+            <Param><![CDATA["yes"]]></Param>
+          </Expression>
+          <Partition DefId="C2">
+            <Condition>
+              <Expression>
+                <Param><![CDATA[1]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A4">
+                  <Expression>
+                    <Param><![CDATA[{"not applicable"}]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+            <Condition>
+              <Expression/>
+              <Partition DefId="C1">
+                <Condition>
+                  <Expression>
+                    <Param><![CDATA[1]]></Param>
+                    <Param><![CDATA[7]]></Param>
+                  </Expression>
+                  <ActionSet>
+                    <Properties>
+                      <Property Name="undefined" Type="xs:boolean"><![CDATA[true]]></Property>
+                    </Properties>
+                    <Action DefId="A0">
+                      <Expression>
+                        <Param><![CDATA[{"applicable for scholarship"}]]></Param>
+                      </Expression>
+                    </Action>
+                  </ActionSet>
+                </Condition>
+              </Partition>
+            </Condition>
+            <Condition>
+              <Expression/>
+              <Partition DefId="C3">
+                <Condition>
+                  <Expression>
+                    <Param><![CDATA[7]]></Param>
+                  </Expression>
+                  <ActionSet>
+                    <Properties>
+                      <Property Name="undefined" Type="xs:boolean"><![CDATA[true]]></Property>
+                    </Properties>
+                    <Action DefId="A2">
+                      <Expression>
+                        <Param><![CDATA[{"not applicable"}]]></Param>
+                      </Expression>
+                    </Action>
+                  </ActionSet>
+                </Condition>
+              </Partition>
+            </Condition>
+          </Partition>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA["no"]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A1">
+              <Expression>
+                <Param><![CDATA[{"not applicable"}]]></Param>
+              </Expression>
+            </Action>
+          </ActionSet>
+        </Condition>
+      </Partition>
+    </Contents>
+  </Body>
+  <Resources DefaultLocale="en_US">
+    <ResourceSet Locale="en_US">
+      <Data Name="/#HeaderText"><![CDATA[Marital Status]]></Data>
+      <Data Name="/0/#HeaderText"><![CDATA[No of Children]]></Data>
+      <Data Name="/0/0/A#Comment"><![CDATA[Not Eligible]]></Data>
+      <Data Name="/0/1/#HeaderText"><![CDATA[NA]]></Data>
+      <Data Name="/0/1/0/A#Comment"><![CDATA[Eligible]]></Data>
+      <Data Name="/0/2/#HeaderText"><![CDATA[NA]]></Data>
+      <Data Name="/0/2/0/A#Comment"><![CDATA[Not Eligible]]></Data>
+      <Data Name="/1/A#Comment"><![CDATA[No children]]></Data>
+    </ResourceSet>
+  </Resources>
+</DT></definition>
+</ilog.rules.studio.model.dt:DecisionTree>

@@ -1,0 +1,6 @@
+use finalList;
+use Benefits;
+
+function void data() {
+familyBenefits.addAll(Benefits.benefitsData());
+}

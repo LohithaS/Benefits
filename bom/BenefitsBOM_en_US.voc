@@ -1,0 +1,21 @@
+# Vocabulary Properties
+uuid = 427dda96-e65c-4453-bbf5-662eec17ba7a
+
+# Benefits.Benefits
+Benefits.Benefits#concept.label = benefits
+Benefits.Benefits.benefitsData()#phrase.navigation = {this}.benefitsData()
+Benefits.Benefits.maritalStatus#phrase.action = set the marital status of {this} to {marital status}
+Benefits.Benefits.maritalStatus#phrase.navigation = {marital status} of {this}
+Benefits.Benefits.name#phrase.action = set the name of {this} to {name}
+Benefits.Benefits.name#phrase.navigation = {name} of {this}
+Benefits.Benefits.noOfChildren#phrase.action = set the no of children of {this} to {no of children}
+Benefits.Benefits.noOfChildren#phrase.navigation = {no of children} of {this}
+Benefits.Benefits.parents#phrase.action = set the parents of {this} to {parent}
+Benefits.Benefits.parents#phrase.navigation = {parent} of {this}
+
+# Benefits.Parents
+Benefits.Parents#concept.label = parents
+Benefits.Parents.age#phrase.action = set the age of {this} to {age}
+Benefits.Parents.age#phrase.navigation = {age} of {this}
+Benefits.Parents.relation#phrase.action = set the relation of {this} to {relation}
+Benefits.Parents.relation#phrase.navigation = {relation} of {this}

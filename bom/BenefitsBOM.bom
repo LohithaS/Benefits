@@ -1,0 +1,24 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/Benefits//BenefitsXOM"
+property uuid "41f88393-0477-4056-9895-a0b7920459bc"
+package Benefits;
+
+
+public class Benefits
+{
+    public string maritalStatus;
+    public string name;
+    public int noOfChildren;
+    public java.util.List parents domain 0,* class Benefits.Parents;
+    public Benefits();
+    public java.util.List benefitsData() domain 0,* class string;
+}
+
+public class Parents
+{
+    public int age;
+    public string relation;
+    public Parents();
+}
+

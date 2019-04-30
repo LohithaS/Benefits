@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><teamservers>
+<teamserver>
+<target dataSource="" login="admin" url="http://localhost:9080/teamserver"/>
+<entry baseType="BRLRule" checksum="1004714054" projectName="Benefits" qualifiedName="ValidationRule" sourceCS="D12478FFAAC017EAE7B07F25BDCAA19F" targetCS="1004714054" type="BRLRule" uuid="a85488eb-f0c8-48f8-bcd4-16d9791829b2"/>
+<entry baseType="BusinessObjectModel" checksum="2974052302" projectName="Benefits" qualifiedName="BenefitsBOM" sourceCS="1398B3B3B8D864B9EA0046BBA32C6958" targetCS="2974052302" type="BusinessObjectModel" uuid="41f88393-0477-4056-9895-a0b7920459bc"/>
+<entry baseType="DecisionOperation" checksum="41708969" projectName="Benefits" qualifiedName="BenefitsOperation" sourceCS="824542529226B7C13CC121A9289E7DB1" targetCS="41708969" type="DecisionOperation" uuid="7ead7993-aa61-467e-bf1c-bfd7250a7f73"/>
+<entry baseType="DecisionTree" checksum="897134887" projectName="Benefits" qualifiedName="employementBenefitsTree" sourceCS="BBDD5FCB20DCC8431240ED91AEA25146" targetCS="897134887" type="DecisionTree" uuid="51e0331c-99a5-46ad-a4dd-dba4c5158d6a"/>
+<entry baseType="DeploymentConfiguration" checksum="3644721862" projectName="Benefits" qualifiedName="Benefits" sourceCS="02F221439834E4F27C2A253ACA39A69A" targetCS="3644721862" type="DeploymentConfiguration" uuid="d6965e80-709b-47c0-aba8-4c1514082f76"/>
+<entry baseType="Function" checksum="2202566951" projectName="Benefits" qualifiedName="data" sourceCS="CD6CE0EB6AA390F2EA92D8172D558BE9" targetCS="2202566951" type="Function" uuid="d8fa1071-fe1f-4655-b5ca-a5344ca0560a"/>
+<entry baseType="Resource" checksum="2977781481" projectName="Benefits" qualifiedName="META-INF/deployment.xml" sourceCS="020B08B7C56159A1A4F55DF6EBDC2449" targetCS="2977781481" type="Resource" uuid="META-INF/deployment.xml"/>
+<entry baseType="Ruleflow" checksum="1793348348" projectName="Benefits" qualifiedName="benefitsFlow" sourceCS="192918B7128474CEDEC5BEF36DDAF218" targetCS="1793348348" type="Ruleflow" uuid="79b70d7e-b912-4562-8d56-d8ae50d81c96"/>
+<entry baseType="RuleProjectInfo" checksum="4157088320" projectName="Benefits" qualifiedName="Benefits" sourceCS="FDF970BD02F951440A1F1898FEF22B65" targetCS="4157088320" type="RuleProjectInfo" uuid="36b1c25d-0e4c-4e65-a33c-9ee2a24eb83a"/>
+<entry baseType="VariableSet" checksum="2380704791" projectName="Benefits" qualifiedName="BenefitsData" sourceCS="DDD4494BAC338DC8EAF0C0B8E7AA19F8" targetCS="2380704791" type="VariableSet" uuid="204b8229-7741-482a-827a-90a8104840d4"/>
+<entry baseType="Vocabulary" checksum="2974052302" projectName="Benefits" qualifiedName="BenefitsBOM_en_US" sourceCS="D29F57312C0665703958A7E680D138D1" targetCS="2974052302" type="Vocabulary" uuid="427dda96-e65c-4453-bbf5-662eec17ba7a"/>
+</teamserver>
+</teamservers>

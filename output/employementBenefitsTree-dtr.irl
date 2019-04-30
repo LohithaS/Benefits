@@ -1,0 +1,82 @@
+// begin DT employementBenefitsTree
+// -- begin rule 'employementBenefitsTree 0'
+/**
+ * Not Eligible
+ */
+rule employementBenefitsTree_0 {
+   property ilog.rules.business_name = "employementBenefitsTree 1";
+   property ilog.rules.dt = "employementBenefitsTree";
+   property ilog.rules.group = "employementBenefitsTree";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      Benefits.Benefits() from Benefits;
+      evaluate ((((Benefits.maritalStatus.equals("yes"))) && (Benefits.noOfChildren < 1)));
+   } then {
+      familyBenefits = ((java.util.ArrayList) ilog.rules.brl.IlrCollectionUtil.populateCollection(new Object[]{"not applicable"}, new java.util.ArrayList()));
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'employementBenefitsTree 0'
+// -- begin rule 'employementBenefitsTree 1'
+/**
+ * Eligible
+ */
+rule employementBenefitsTree_1 {
+   property ilog.rules.business_name = "employementBenefitsTree 2";
+   property ilog.rules.dt = "employementBenefitsTree";
+   property ilog.rules.group = "employementBenefitsTree";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      Benefits.Benefits() from Benefits;
+      evaluate ((((Benefits.maritalStatus.equals("yes"))) && (Benefits.noOfChildren in [1, 7])));
+   } then {
+      familyBenefits = ((java.util.ArrayList) ilog.rules.brl.IlrCollectionUtil.populateCollection(new Object[]{"applicable for scholarship"}, new java.util.ArrayList()));
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'employementBenefitsTree 1'
+// -- begin rule 'employementBenefitsTree 2'
+/**
+ * Not Eligible
+ */
+rule employementBenefitsTree_2 {
+   property ilog.rules.business_name = "employementBenefitsTree 3";
+   property ilog.rules.dt = "employementBenefitsTree";
+   property ilog.rules.group = "employementBenefitsTree";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      Benefits.Benefits() from Benefits;
+      evaluate ((((Benefits.maritalStatus.equals("yes"))) && (Benefits.noOfChildren > 7)));
+   } then {
+      familyBenefits = ((java.util.ArrayList) ilog.rules.brl.IlrCollectionUtil.populateCollection(new Object[]{"not applicable"}, new java.util.ArrayList()));
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'employementBenefitsTree 2'
+// -- begin rule 'employementBenefitsTree 3'
+/**
+ * No children
+ */
+rule employementBenefitsTree_3 {
+   property ilog.rules.business_name = "employementBenefitsTree 4";
+   property ilog.rules.dt = "employementBenefitsTree";
+   property ilog.rules.group = "employementBenefitsTree";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      Benefits.Benefits() from Benefits;
+      evaluate ((((Benefits.maritalStatus.equals("no")))));
+   } then {
+      familyBenefits = ((java.util.ArrayList) ilog.rules.brl.IlrCollectionUtil.populateCollection(new Object[]{"not applicable"}, new java.util.ArrayList()));
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'employementBenefitsTree 3'
+// end DT employementBenefitsTree
